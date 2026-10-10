@@ -41,7 +41,7 @@ body {
   overflow: hidden;
   border-radius: 2.375rem;
 
-  @media (max-width: 32.5rem) {
+  @media (max-width: 33.125rem) {
     width: min(18.75rem, 100%);
   }
 }
