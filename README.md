@@ -42,11 +42,27 @@ I also had a lot of fun playing around with `filter: blur()` to apply an effect 
 }
 ```
 
-Overall this was a very fun experiment for the masonry layout. I also used ngrok this time to  check the layout in realtime using my iPhone and I plan to continue using it going forward for mobile-first workflow.
+I also used **ngrok** this time to  check the layout in realtime using my iPhone and I plan to continue using it going forward for mobile-first workflow.
+
+Through this, I found out that iOS Safari/Webkit can encounter flickering issues while handling composite layers, background rendering, and `backdrop-filter` during scroll and pinch-to-zoom.
+
+In this code, the quick fix that I did was to use `translateZ(0)` which applies a 3D transformation to force hardware acceleration.
+```css
+.blur-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  opacity: 0.8;
+  z-index: 1;
+  transform: translateZ(0);
+}
+```
 
 # Continued development
 
-In this project I allowed the items to scroll but I used `overflow: hidden`. In my next coding activities, I want to learn how to customize scroll bars to make it look like it actually belongs to my project design.
+Overall this was a very fun experiment for the masonry layout. In this project I allowed the items to scroll but I used `overflow: hidden`. In my next coding activities, I want to learn how to customize scroll bars to make it look like it actually belongs to my project design.
 
 I also want to update this code in the future so that each card takes its info from a json file.
 
