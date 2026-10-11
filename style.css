@@ -165,7 +165,7 @@ body {
 .user, .card-content { padding: var(--sp-sm); }
 
 .user {
-  padding-top: var(--sp-xl);
+  padding-top: calc(var(--border-rad-inner) + var(--sp-sm));
   display: flex;
   gap: var(--sp-sm);
   background-color: #3d3d3d;
