@@ -44,7 +44,7 @@ body {
   border-radius: 2.375rem;
 
   @media (max-width: 33.125rem) {
-    max-height: calc(100vh - (var(--sp-base) * 2));
+    max-height: calc(100svh - (var(--sp-base) * 2));
   }
 }
 
