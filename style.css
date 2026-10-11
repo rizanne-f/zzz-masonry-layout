@@ -152,6 +152,8 @@ body {
   filter: blur(3px);
   opacity: 0.8;
   z-index: 1;
+  transform: translateZ(0);
+  /* will-change: transform, filter; */
 }
 
 .card-image {
