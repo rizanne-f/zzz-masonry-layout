@@ -30,7 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: var(--sp-base);
 }
 
@@ -45,6 +45,7 @@ body {
 
   @media (max-width: 33.125rem) {
     max-height: calc(100svh - (var(--sp-base) * 2));
+    align-self: flex-start;
   }
 }
 
