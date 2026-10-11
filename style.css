@@ -44,7 +44,7 @@ body {
   border-radius: 2.375rem;
 
   @media (max-width: 33.125rem) {
-    width: min(18.75rem, 100%);
+    max-height: calc(100vh - (var(--sp-base) * 2));
   }
 }
 
@@ -95,12 +95,17 @@ body {
 .container::-webkit-scrollbar { display: none; }
 
 .masonry {
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
   grid-template-rows: masonry;
   grid-auto-flow: dense;
   gap: var(--sp-sm);
   justify-content: center;
+
+  @media (max-width: 33.125rem) {
+    padding: var(--sp-sm);
+    gap: var(--sp-md);
+  }
 
   > * {
     align-self: start;
@@ -171,6 +176,7 @@ body {
   max-height: 2.625rem;
   min-width: 2.625rem;
   max-width: 2.625rem;
+  min-height: 2.625rem;
   object-fit: cover;
 }
 
